@@ -47,3 +47,167 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+root {
+    --purple: #9b26b0;
+    --yellow: #f6d64a;
+    --teal: #55bcd5;
+    --blue: #499bd2;
+    --dark-gray: #222222;
+    --light-gray: #eaeaea;
+    --white: #ffffff;
+    --black: #000000
+}
+/* Set basic font and background */
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Skip link */
+#skip {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+#skip:focus {
+    top: 0;
+}
+
+/* Header styles */
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header p {
+    font-weight: 300;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+}
+
+article {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#intro, #plan, #testimonials, #about, #contact {
+    margin-bottom: 20px;
+}
+
+#img-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#img-grid img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Plan your trip section */
+#plan div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#testimonials div, #about div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Contact form styles */
+form {
+    display: grid;
+    grid-gap: 20px;
+}
+
+#names, #nums, #selects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    #img-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #plan div, #testimonials div, #about div {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    #img-grid {
+        grid-template-columns: 1fr;
+    }
+}
