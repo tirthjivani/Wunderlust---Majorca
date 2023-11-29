@@ -13,42 +13,41 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
+article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-    display: block;
+	display: block;
 }
 body {
-    line-height: 1;
+	line-height: 1;
 }
 ol, ul {
-    list-style: none;
+	list-style: none;
 }
 blockquote, q {
-    quotes: none;
+	quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-    content: '';
-    content: none;
+	content: '';
+	content: none;
 }
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
-
-root {
+:root {
     --purple: #9b26b0;
     --yellow: #f6d64a;
     --teal: #55bcd5;
@@ -58,136 +57,455 @@ root {
     --white: #ffffff;
     --black: #000000
 }
-/* Set basic font and background */
-body {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-}
 
-/* Skip link */
-#skip {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: #000;
-    color: white;
-    padding: 8px;
-    z-index: 100;
-}
 
-#skip:focus {
-    top: 0;
-}
 
-/* Header styles */
+
+/* Header Styles */
 header {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(5deg, rgba(255, 255, 255, 1) 0%, rgba(85, 188, 213, 1) 100%);
+    color: #000000;
+    padding: 20px;
+    text-align: left;
+    min-height: 100px;
 }
 
-header h1 {
-    margin-bottom: 10px;
+#logo img {
+    max-width: 100%; /* Adjust the width as needed */
+    height:50%; /* Maintain aspect ratio */
+}
+
+#logo {
+    flex: 1; /* Make the logo column flexible to take available space */
+}
+
+#header-content {
+    flex: 1; /* Make the content column flexible to take available space */
+    margin: 0 20px; /* Add margin between logo and content */
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Molle', cursive;
+    font-style: italic;
+    font-size: 24px;
+    color: #000000;
 }
 
 header p {
-    font-weight: 300;
+    margin-bottom: -7em;
+    font-family: 'Montserrat';
+    font-size: 10px;
+    text-align: left;
 }
 
-/* Navigation styles */
+/* Navigation Styles */
+nav {
+    display:list-item;
+    flex: 1; /* Make the navigation column flexible to take available space */
+    background: none;
+    padding-top: none;
+    padding-bottom: 70px;
+}
+
 nav ul {
-    list-style: none;
+    list-style-type: none;
+    padding: none;
+    display: flex; /* Use flexbox for horizontal layout */
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+nav li  {
+    margin-right: 5px;
 }
 
-nav ul li a {
-    color: #fff;
+nav a {
     text-decoration: none;
+    color: #000000;
+    font-style: 'Montserrat';
+    text-transform: uppercase;
+    font-weight: 100;
+    padding: 5px;
+    background-color: #FFFFFF;
+    
 }
 
-/* Main content styles */
-main {
-    padding: 20px;
+nav a:hover,
+nav a:focus {
+    background: #F6D64A;
 }
 
-article {
-    background: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
+/* Active page styling */
+nav .active a {
+    background: #F6D64A;
 }
 
-#intro, #plan, #testimonials, #about, #contact {
+
+
+
+
+/* Intro Section Styles */
+
+#intro {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+#intro > div {
+    width: 50%; /* Adjust the width as needed */
+}
+
+#intro h2 {
+    font-family: 'Molle', cursive;
+    font-style: italic;
+    color: #222222; /* Dark Gray */
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+#intro p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    color: #222222; /* Dark Gray */
+    line-height: 1.6;
     margin-bottom: 20px;
 }
 
 #img-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    margin-top: 20px;
 }
 
 #img-grid img {
-    max-width: 100%;
+    width: 100%;;
     height: auto;
-    display: block;
+    border-radius: 0px;
+    margin-bottom: 20px;
 }
 
-/* Plan your trip section */
+
+
+
+
+
+/* Plan Your Trip Styles */
+
+#plan h3 {
+    font-family: 'Molle', cursive; /* Use Molle font */
+    font-style: italic; /* Italicize the text */
+    color: #000000; /* Dark Gray */
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+#plan h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: #222222; /* Dark Gray */
+    font-size: 14px;
+    text-transform: uppercase; /* Uppercase text */
+    font-weight: bold;  
+    margin-top: 10px;
+    text-align: center;
+    
+}
+
+#plan {
+    background-color: var(--yellow);
+    text-align: left;
+    padding: 40px;
+    top: 80px;
+}
+
 #plan div {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-#testimonials div, #about div {
+#plan section {
+    text-align: center;
+    position: relative;
+}
+
+
+#plan img {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    background-color: var(--teal);
+    border: 1px solid var(--white);
+    border-radius: 5px;
+    
+}
+.plan-item h4 {
+    margin-top: 10px;
+}
+
+
+
+
+
+
+/* Testimonials Styles */
+
+#testimonials h3{
+    font-family: 'Molle', cursive; /* Use Molle font */
+    font-style: italic; /* Italicize the text */
+    color: #000000; /* Dark Gray */
+    margin-top: 30px;;
+    margin-left: 25px;
+    padding: 25px;
+    
+}
+#testimonials h4 {
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase; /* Uppercase text */
+    margin-top: 10%;
+    font-size: 12px;
+    text-align: center;
+}
+
+#testimonials p {
+    margin-bottom: 5px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 3px;
+    font-size: 9px;
+    text-align: center;
+}
+#testimonials q {
+   margin-top: auto;
+    font-style: italic;
+    font-family: 'Montserrat';
+    font-size: 9px;
+    text-align: center;
+    
+}
+
+#testimonials section {
+    background-color: #ffffff; 
+    padding: 5px;
+    border-radius: 10px;
+    flex:1;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 5px;
+    }
+
+#testimonials div {
+    display: flex; /* Use flexbox for horizontal layout */
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-top: none;
+    padding-right: 5%;
+    padding-left: 5%;
+   
+}
+
+
+#testimonials img {
+    border-radius: 50%; /* Make the images circular */
+    max-width: 100%; /* Ensure images don't exceed their container width */
+}
+
+
+
+
+/* About Your Destination Styles */
+#about {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 30px;
+    background-color: #499BD2; /* Blue */
+    color: #FFFFFF; /* White */
+    padding: 15px;
+}
+
+#about h3 {
+    font-family: 'Molle', cursive; /* Use Molle font */
+    font-style: italic; /* Italicize the text */
+    color: #222222; /* Dark Gray */
+    margin-bottom: 20px;
+}
+#about h4 {
+    text-transform: uppercase; /* Uppercase text */
+    text-size-adjust:10px;
+    margin: 0; /* Remove default margin for h4 */
+    font-size: 12px; /* Set a specific font size for h4 */
+    font-weight: bold; /* Make h4 text bold */
+    color: #000000; /* Black */
+}
+
+#about p {
+    margin: 0; /* Remove default margin for paragraphs */
+    font-size: 10px; /* Set a specific font size for paragraphs */
+    color: #000000; /* Black */
+    font-family: 'Montserrat', sans-serif; /* Specify font-family for paragraphs */
+    font-size: 9px;
+}
+
+#about div {
+    display: flex; /* Use flexbox for horizontal layout */
+    margin: 30px; /* Adjust negative margin to counteract padding */
+    justify-content: space-around; /* Adjust to your preferred spacing */
+    padding-left: 7%;
+    padding-right: 7%;
+    
+}
+
+#about section {
+    text-align: center; /* Center-align text */
+    padding:  10px; /* Add padding to each section */
+
+}
+
+#about img {
+    width: 70%; /* Set a width of 100% for equal sizing */
+    height: 70%; /* Maintain aspect ratio */
+    max-width: 500px; /* Set a maximum width to avoid stretching */
+    margin-bottom: 10px; /* Add spacing below images */
+    text-align: center;
+    margin-left: 25px;
+    margin-right: 25px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+/* Contact Us Section Styles */
+
+#contact {
+    background-color: #ffffff; /* Adjust the background color as needed */
+    padding: 50px;
+}
+
+#contact h3{
+    font-family: 'Molle', cursive; /* Use Molle font */
+    font-style: italic; /* Italicize the text */
+    color: #222222; /* Dark Gray */
+    margin-bottom: 20px;
+}
+
+#contact form {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, 200px);
+    gap: 25px;
 }
 
-/* Contact form styles */
-form {
-    display: grid;
-    grid-gap: 20px;
+#names,
+#nums,
+#selects {
+    grid-column: span 1;
 }
 
-#names, #nums, #selects {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+#names,
+#nums {
+    display: flex;
+    flex-direction: column;
 }
 
-input[type="text"], input[type="email"], input[type="tel"], select {
+#nums fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nums label {
+    margin-bottom: 10px;
+}
+
+.radio-input {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+}
+
+.radio-input input {
+    margin-right: 2px;
+}
+
+#selects {
+    grid-column: span 2;
+}
+
+.custom-select {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.custom-select select {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
 }
 
-input[type="submit"] {
-    padding: 10px 20px;
-    background: #333;
-    color: #fff;
+.custom-select .focus {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #333; /* Adjust the color as needed */
+    pointer-events: none;
+}
+
+#mySubmit {
+    width: 100%;
+    padding: 10px;
     border: none;
+    border-radius: 0px;
+    background-color: #333; /* Adjust the color as needed */
+    color: #fff;
     cursor: pointer;
 }
 
-/* Footer styles */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
+#mySubmit:hover {
+    background-color: #555; /* Adjust the color as needed */
 }
 
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    form label,
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="tel"],
+    form select,
+    form input[type="submit"] {
+        flex-basis: calc(100% - 10px); /* Span the full width on smaller screens */
+    }
+}
+/* For small screens, stack the columns */
+@media (max-width: 768px) {
+    #intro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #intro > div,
+    #img-grid {
+        width: 100%;
+    }
+}
+
+
+
+
 footer a {
-    color: #fff;
+    color: #EAEAEA; 
     text-decoration: none;
 }
 
@@ -195,19 +513,20 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Media Queries */
+/* Responsive Design */
 @media (max-width: 768px) {
     #img-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    #plan div, #testimonials div, #about div {
-        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 500px) {
     #img-grid {
         grid-template-columns: 1fr;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
     }
 }
