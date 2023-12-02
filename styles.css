@@ -202,13 +202,13 @@ nav {
 
 nav ul {
     list-style-type: none;
-    padding: none;
+    padding: 0; /* Remove default padding */
     display: flex;
-    flex-direction: column; /* Arrange the navigation items vertically */
+    flex-direction: row; /* Arrange the navigation items horizontally */
 }
 
 nav li {
-    margin-bottom: 5px;
+    margin-right: 10px; /* Add margin between navigation items */
 }
 
 nav a {
@@ -230,6 +230,7 @@ nav a:focus {
 nav .active a {
     background: #F6D64A;
 }
+
 
 
 
@@ -338,8 +339,8 @@ nav .active a {
 
 
 #plan img {
-    width: 200px;
-    height: 225px;
+    width: 300px;
+    height: 150px;
     position: relative;
     background-color: var(--teal);
     border: 1px solid var(--white);
@@ -605,8 +606,11 @@ footer a:hover {
     text-decoration: underline;
 }
 
+/* Base Mobile Styles */
+/* These styles are for the smallest screens (mobile-first approach) */
+
 /* Small Screen Styles */
-@media (max-width: 320px) {
+@media (min-width: 480px) {
     /* Header Styles */
     header {
         padding: 10px;
@@ -784,5 +788,368 @@ footer a:hover {
 
     footer a {
         font-size: 12px;
+    }
+}
+
+
+
+/* Medium Screen Styles */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Header Styles */
+    header {
+        padding: 15px;
+    }
+
+    #logo img {
+        max-width: 90%;
+    }
+
+    #header-content {
+        margin: 0 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    /* Navigation Styles */
+    nav a {
+        padding: 8px;
+    }
+
+    /* Intro Section Styles */
+    #intro h2 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    #intro p {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    #img-grid img {
+        margin-bottom: 20px;
+    }
+
+    /* Plan Your Trip Styles */
+    #plan h3 {
+        font-size: 22px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    #plan section h4 {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    #plan section svg {
+        width: 200px;
+        height: 600px;
+    }
+
+    #plan {
+        padding: 40px;
+    }
+
+    #plan img {
+        width: 250px;
+        height: 275px;
+    }
+
+    #plan-item h4 {
+        margin-top: 15%;
+    }
+
+    /* Testimonials Styles */
+    #testimonials h3 {
+        font-size: 24px;
+        margin-top: 40px;
+        margin-left: 25px;
+        padding: 35px;
+    }
+
+    #testimonials h4 {
+        font-size: 16px;
+        margin-top: 15%;
+    }
+
+    #testimonials p {
+        font-size: 12px;
+        margin-bottom: 8px;
+        margin-top: 5px;
+    }
+
+    #testimonials q {
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+    #testimonials section {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #testimonials div {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    #testimonials img {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* About Your Destination Styles */
+    #about h3 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    #about h4 {
+        font-size: 14px;
+    }
+
+    #about p {
+        font-size: 12px;
+    }
+
+    #about div {
+        margin: 30px;
+    }
+
+    #about img {
+        width: 80%;
+        height: auto;
+        margin-bottom: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    /* Contact Form Styles */
+    #contact h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    form {
+        padding: 30px;
+    }
+
+    form label,
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="tel"],
+    form textarea,
+    form select,
+    form input[type="submit"] {
+        width: 100%;
+    }
+
+    form input[type="submit"] {
+        padding: 20px 30px;
+    }
+
+    .form-row > label,
+    .form-row > input,
+    .form-row > select {
+        flex-basis: 100%;
+    }
+
+    /* Footer Styles */
+    footer {
+        padding: 15px;
+    }
+
+    footer a {
+        font-size: 16px;
+    }
+}
+
+
+
+
+/* Large Screen Styles */
+@media screen and (min-width: 1024px) {
+    /* Header Styles */
+    header {
+        padding: 30px;
+    }
+
+    #logo img {
+        max-width: 70%;
+    }
+
+    #header-content {
+        margin: 0 30px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    /* Navigation Styles */
+    nav a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* Intro Section Styles */
+    #intro h2 {
+        font-size: 36px;
+        margin-bottom: 15px;
+        margin-top: 30px;
+    }
+
+    #intro p {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    #img-grid img {
+        margin-bottom: 30px;
+    }
+
+    /* Plan Your Trip Styles */
+    #plan h3 {
+        font-size: 30px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    #plan section h4 {
+        font-size: 18px;
+        margin-top: 15px;
+    }
+
+    #plan section svg {
+        width: 200px;
+        height: 550px;
+    }
+
+    #plan {
+        padding: 50px;
+    }
+
+    #plan img {
+        width: 250px;
+        height: 275px;
+    }
+
+    #plan-item h4 {
+        margin-top: 20%;
+    }
+
+    /* Testimonials Styles */
+    #testimonials h3 {
+        font-size: 32px;
+        margin-top: 40px;
+        margin-left: 30px;
+        padding: 35px;
+    }
+
+    #testimonials h4 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    #testimonials p {
+        font-size: 16px;
+        margin-bottom: 12px;
+        margin-top: 10px;
+    }
+
+    #testimonials q {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    #testimonials section {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #testimonials div {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    #testimonials img {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* About Your Destination Styles */
+    #about h3 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    #about h4 {
+        font-size: 20px;
+    }
+
+    #about p {
+        font-size: 16px;
+    }
+
+    #about div {
+        margin: 40px;
+    }
+
+    #about img {
+        width: 90%;
+        height: auto;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    /* Contact Form Styles */
+    #contact h3 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    form {
+        padding: 40px;
+    }
+
+    form label,
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="tel"],
+    form textarea,
+    form select,
+    form input[type="submit"] {
+        width: 80%;
+    }
+
+    form input[type="submit"] {
+        padding: 20px 30px;
+    }
+
+    .form-row > label,
+    .form-row > input,
+    .form-row > select {
+        flex-basis: 80%;
+    }
+
+    /* Footer Styles */
+    footer {
+        padding: 30px;
+    }
+
+    footer a {
+        font-size: 18px;
     }
 }
